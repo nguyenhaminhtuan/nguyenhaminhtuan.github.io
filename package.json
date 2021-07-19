@@ -12,7 +12,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
+    "deploy": "gh-pages -d public -b gh-pages"
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",
