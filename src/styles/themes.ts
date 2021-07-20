@@ -1,4 +1,6 @@
-const colors = {
+import type { Theme, Color } from '@emotion/react';
+
+const colors: Color = {
   white: {
     100: 'rgb(255, 255, 255)',
     200: 'rgb(246, 247, 249)',
@@ -16,7 +18,7 @@ const colors = {
   },
 };
 
-const themes = {
+const themes: { [x: string]: Theme } = {
   light: {
     colors: {
       ...colors,

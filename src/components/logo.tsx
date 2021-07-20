@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
 
-const Logo = styled(Link)`
+const Logo = styled.a`
   font-family: 'Hackernoon';
   font-size: 27px;
 

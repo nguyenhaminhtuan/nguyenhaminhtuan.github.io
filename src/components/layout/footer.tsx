@@ -1,8 +1,7 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import Container from '../container';
 
-const Footer = () => {
+function Footer(): JSX.Element {
   return (
     <FooterWrapper>
       <Container>
@@ -10,7 +9,7 @@ const Footer = () => {
       </Container>
     </FooterWrapper>
   );
-};
+}
 
 const FooterWrapper = styled.footer`
   padding: 15px 0;

@@ -1,52 +1,52 @@
 @font-face {
   font-family: 'Hackernoon';
-  src: url('../assets/fonts/HackerNoonV1-Regular.ttf');
+  src: url('/fonts/HackerNoonV1-Regular.ttf');
 }
 @font-face {
   font-family: 'IBM Plex Mono';
-  src: url('../assets/fonts/IBMPlexMono-Regular.ttf');
+  src: url('/fonts/IBMPlexMono-Regular.ttf');
 }
 @font-face {
   font-family: 'IBM Plex Mono';
   font-weight: 500;
-  src: url('../assets/fonts/IBMPlexMono-Medium.ttf');
+  src: url('/fonts/IBMPlexMono-Medium.ttf');
 }
 @font-face {
   font-family: 'IBM Plex Mono';
   font-weight: 600;
-  src: url('../assets/fonts/IBMPlexMono-SemiBold.ttf');
+  src: url('/fonts/IBMPlexMono-SemiBold.ttf');
 }
 @font-face {
   font-family: 'IBM Plex Mono';
   font-weight: bold;
-  src: url('../assets/fonts/IBMPlexMono-Bold.ttf');
+  src: url('/fonts/IBMPlexMono-Bold.ttf');
 }
 @font-face {
   font-family: 'IBM Plex Mono';
   font-style: italic;
-  src: url('../assets/fonts/IBMPlexMono-Italic.ttf');
+  src: url('/fonts/IBMPlexMono-Italic.ttf');
 }
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url('../assets/fonts/IBMPlexSans-Regular.ttf');
+  src: url('/fonts/IBMPlexSans-Regular.ttf');
 }
 @font-face {
   font-family: 'IBM Plex Sans';
   font-weight: 500;
-  src: url('../assets/fonts/IBMPlexSans-Medium.ttf');
+  src: url('/fonts/IBMPlexSans-Medium.ttf');
 }
 @font-face {
   font-family: 'IBM Plex Sans';
   font-weight: 600;
-  src: url('../assets/fonts/IBMPlexSans-SemiBold.ttf');
+  src: url('/fonts/IBMPlexSans-SemiBold.ttf');
 }
 @font-face {
   font-family: 'IBM Plex Sans';
   font-weight: bold;
-  src: url('../assets/fonts/IBMPlexSans-Bold.ttf');
+  src: url('/fonts/IBMPlexSans-Bold.ttf');
 }
 @font-face {
   font-family: 'IBM Plex Sans';
   font-style: italic;
-  src: url('../assets/fonts/IBMPlexSans-Italic.ttf');
+  src: url('/fonts/IBMPlexSans-Italic.ttf');
 }

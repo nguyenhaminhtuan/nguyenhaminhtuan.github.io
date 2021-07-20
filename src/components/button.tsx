@@ -1,7 +1,14 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { css } from '@emotion/react';
 
-const Button = forwardRef(({ variant = 'default', ...props }, ref) => {
+type ButtonProps = {
+  variant: 'default' | 'outlined';
+} & React.ComponentPropsWithRef<'a'>;
+
+export default forwardRef<HTMLAnchorElement, ButtonProps>(function Button(
+  { variant = 'default', ...props },
+  ref
+) {
   return (
     <a
       {...props}
@@ -27,5 +34,3 @@ const Button = forwardRef(({ variant = 'default', ...props }, ref) => {
     />
   );
 });
-
-export default Button;

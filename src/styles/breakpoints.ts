@@ -5,5 +5,5 @@ export const breakpoints = {
   xl: 1200,
 };
 
-export const mediaQuery = (size) =>
+export const mediaQuery = (size: keyof typeof breakpoints) =>
   `@media (min-width: ${breakpoints[size]}px)`;

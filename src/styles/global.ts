@@ -1,9 +1,7 @@
 import { css } from '@emotion/react';
+import type { GlobalProps } from '@emotion/react';
 
-const globalCss = ({ colors }) => css`
-  ${import('./normalize.css')}
-  ${import('./fonts.css')}
-
+const glboalCss: GlobalProps['styles'] = ({ colors }) => css`
   *,
   *::before,
   *::after {
@@ -61,4 +59,4 @@ const globalCss = ({ colors }) => css`
   }
 `;
 
-export default globalCss;
+export default glboalCss;

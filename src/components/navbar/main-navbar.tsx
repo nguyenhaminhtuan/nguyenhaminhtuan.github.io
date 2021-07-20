@@ -1,20 +1,22 @@
-import React from 'react';
-import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import { mediaQuery } from '../../styles';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 import Logo from '../logo';
 import Container from '../container';
 import ThemeToggler from '../theme-toggler';
 import Button from '../button';
 import Icon from '../icon';
 
-const MainNavbar = () => {
+function MainNavbar(): JSX.Element {
   return (
     <Container>
       <MainNavbarInner>
         <MainNavbarLeft>
-          <Logo to="/" />
+          <Link href="/" passHref>
+            <Logo />
+          </Link>
         </MainNavbarLeft>
         <MainNavbarRight>
           <Button css={styles.getInTouch} variant="outlined">
@@ -26,7 +28,7 @@ const MainNavbar = () => {
       </MainNavbarInner>
     </Container>
   );
-};
+}
 
 const styles = {
   getInTouch: css`

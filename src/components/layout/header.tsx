@@ -1,9 +1,8 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { mediaQuery } from '../../styles';
 import { MainNavbar, SubNavbar } from '../navbar';
 
-const Header = () => {
+function Header(): JSX.Element {
   return (
     <HeaderWrapper>
       <MainNavbarWrapper>
@@ -14,7 +13,7 @@ const Header = () => {
       </SubNavbarWrapper>
     </HeaderWrapper>
   );
-};
+}
 
 const HeaderWrapper = styled.header`
   width: 100%;

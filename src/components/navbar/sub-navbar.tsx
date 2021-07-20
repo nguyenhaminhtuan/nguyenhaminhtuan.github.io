@@ -1,24 +1,33 @@
-import React from 'react';
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
 const SubNavbar = () => {
   return (
     <ListNavItem>
       <NavItem>
-        <Link to="/about-me">About me</Link>
+        <Link href="/about-me">
+          <a>About me</a>
+        </Link>
       </NavItem>
       <NavItem>
-        <Link to="/skills">Skills</Link>
+        <Link href="/skills">
+          <a>Skills</a>
+        </Link>
       </NavItem>
       <NavItem>
-        <Link to="/projects">Projects</Link>
+        <Link href="/projects">
+          <a>Projects</a>
+        </Link>
       </NavItem>
       <NavItem>
-        <Link to="/contract">Contract</Link>
+        <Link href="/contract">
+          <a>Contract</a>
+        </Link>
       </NavItem>
       <NavItem>
-        <Link to="/article">Article</Link>
+        <Link href="/article">
+          <a>Articles</a>
+        </Link>
       </NavItem>
     </ListNavItem>
   );
