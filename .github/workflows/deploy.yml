@@ -26,7 +26,9 @@ jobs:
           npm run lint
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          touch out/.nojekyll
 
       - name: Deploy Github Pages
         run: |
