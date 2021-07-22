@@ -1,10 +1,7 @@
 import { css } from '@emotion/react';
 import type { GlobalProps } from '@emotion/react';
-import typography from './typography';
 
 const glboalCss: GlobalProps['styles'] = ({ colors, fonts }) => css`
-  ${typography}
-
   *,
   *::before,
   *::after {

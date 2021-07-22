@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
@@ -16,7 +17,12 @@ function MobileNavbar({
   return (
     <MobileNavbarWrapper open={open} {...props}>
       <IconWrapper>
-        <Icon.Button icon={faTimes} size="2x" onClick={closeNavbar} />
+        <Icon.Button
+          css={styles.icon}
+          icon={faTimes}
+          size="2x"
+          onClick={closeNavbar}
+        />
       </IconWrapper>
       <Nav>
         <li>
@@ -48,6 +54,14 @@ function MobileNavbar({
     </MobileNavbarWrapper>
   );
 }
+
+const styles = {
+  icon: css`
+    width: 45px;
+    height: 45px;
+    font-size: 21px;
+  `,
+};
 
 const MobileNavbarWrapper = styled.div<{ open: boolean }>`
   background-color: ${(props) => props.theme.colors.primary};

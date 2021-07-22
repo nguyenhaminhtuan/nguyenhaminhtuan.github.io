@@ -41,7 +41,7 @@ const ListNavItem = styled.ul`
 
 const NavItem = styled.li`
   padding: 10px 20px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: ${(props) => props.theme.fonts.mono};
   font-size: 1.4rem;
   font-weight: bold;
   color: ${(props) => props.theme.colors.white[100]};

@@ -52,6 +52,8 @@ const styles = {
     }
   `,
   hamburger: css`
+    width: 45px;
+    height: 45px;
     font-size: 28px;
     ${mediaQuery('sm')} {
       display: none;
