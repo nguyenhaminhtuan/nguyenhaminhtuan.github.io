@@ -57,8 +57,8 @@ function MobileNavbar({
 
 const styles = {
   icon: css`
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     font-size: 21px;
   `,
 };

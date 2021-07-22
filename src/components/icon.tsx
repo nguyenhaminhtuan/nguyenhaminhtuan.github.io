@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
@@ -15,8 +16,20 @@ function Button({
   ...props
 }: IconProps & React.ComponentPropsWithoutRef<'button'>): JSX.Element {
   return (
-    <button {...props}>
-      <Icon icon={icon} size={size} />
+    <button
+      {...props}
+      css={css`
+        position: relative;
+      `}
+    >
+      <Icon
+        css={css`
+          position: absolute;
+          transform: translate(-50%, -50%);
+        `}
+        icon={icon}
+        size={size}
+      />
     </button>
   );
 }
