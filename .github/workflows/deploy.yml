@@ -27,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Add .nojekyll file
-        run: touch ./out/.nojekyll
+        run: touch ./out/_next/static/.nojekyll
 
       - name: Deploy Github Pages
         run: |
