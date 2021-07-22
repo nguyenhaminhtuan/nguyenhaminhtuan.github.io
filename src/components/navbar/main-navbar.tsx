@@ -9,7 +9,11 @@ import ThemeToggler from '../theme-toggler';
 import Button from '../button';
 import Icon from '../icon';
 
-function MainNavbar(): JSX.Element {
+type MainNavbarProps = {
+  openNavbar: () => void;
+};
+
+function MainNavbar({ openNavbar }: MainNavbarProps): JSX.Element {
   return (
     <Container>
       <MainNavbarInner>
@@ -19,11 +23,20 @@ function MainNavbar(): JSX.Element {
           </Link>
         </MainNavbarLeft>
         <MainNavbarRight>
-          <Button css={styles.getInTouch} variant="outlined">
+          <Button
+            href="#get-in-touch"
+            css={styles.getInTouch}
+            variant="outlined"
+          >
             Get in touch
           </Button>
           <ThemeToggler />
-          <Icon.Button css={styles.hamburger} icon={faBars} />
+          <Icon.Button
+            css={styles.hamburger}
+            icon={faBars}
+            size="lg"
+            onClick={openNavbar}
+          />
         </MainNavbarRight>
       </MainNavbarInner>
     </Container>

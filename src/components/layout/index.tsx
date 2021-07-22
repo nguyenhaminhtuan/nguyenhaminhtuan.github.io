@@ -35,7 +35,7 @@ const LayoutWrapper = styled.div`
 
 const Main = styled.main`
   flex: 1;
-  margin-top: 80px;
+  margin-top: 70px;
 
   ${mediaQuery('sm')} {
     margin-top: 120px;

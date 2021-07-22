@@ -1,13 +1,24 @@
+import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { mediaQuery } from '../../styles';
 import { MainNavbar, SubNavbar } from '../navbar';
+import MobileNavbar from '../navbar/mobile-navbar';
+import { useWindowSize } from '../../hooks';
 
 function Header(): JSX.Element {
+  const [isOpen, setOpen] = useState(false);
+  const { width } = useWindowSize();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [width]);
+
   return (
     <HeaderWrapper>
       <MainNavbarWrapper>
-        <MainNavbar />
+        <MainNavbar openNavbar={() => setOpen(true)} />
       </MainNavbarWrapper>
+      <MobileNavbar open={isOpen} closeNavbar={() => setOpen(false)} />
       <SubNavbarWrapper>
         <SubNavbar />
       </SubNavbarWrapper>

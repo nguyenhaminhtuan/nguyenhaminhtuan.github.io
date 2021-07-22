@@ -26,5 +26,10 @@ declare module '@emotion/react' {
       secondary: string;
       footer: string;
     } & Color;
+    fonts: {
+      sans: string;
+      mono: string;
+      hackernoon: string;
+    };
   }
 }

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import type { GlobalProps } from '@emotion/react';
 
-const glboalCss: GlobalProps['styles'] = ({ colors }) => css`
+const glboalCss: GlobalProps['styles'] = ({ colors, fonts }) => css`
   *,
   *::before,
   *::after {
@@ -18,7 +18,7 @@ const glboalCss: GlobalProps['styles'] = ({ colors }) => css`
     margin: 0;
     padding: 0;
     font-size: 1.75rem;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: ${fonts.sans};
     color: ${colors.text};
     background-color: ${colors.background};
   }
@@ -29,7 +29,7 @@ const glboalCss: GlobalProps['styles'] = ({ colors }) => css`
     margin: 0;
     padding: 0;
     letter-spacing: 0px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: ${fonts.mono};
     line-height: 1.4;
   }
 
@@ -54,6 +54,7 @@ const glboalCss: GlobalProps['styles'] = ({ colors }) => css`
     background-color: inherit;
   }
 
+  a:hover,
   button:hover {
     cursor: pointer;
   }

@@ -18,6 +18,12 @@ const colors: Color = {
   },
 };
 
+const fonts: Theme['fonts'] = {
+  sans: "'IBM Plex Sans', sans-serif",
+  mono: "'IBM Plex Mono', monospace",
+  hackernoon: 'Hackernoon',
+};
+
 const themes: { [x: string]: Theme } = {
   light: {
     colors: {
@@ -28,6 +34,7 @@ const themes: { [x: string]: Theme } = {
       secondary: colors.green[400],
       footer: colors.gray[100],
     },
+    fonts,
   },
   dark: {
     colors: {
@@ -38,6 +45,7 @@ const themes: { [x: string]: Theme } = {
       secondary: colors.green[400],
       footer: colors.gray[100],
     },
+    fonts,
   },
 };
 

@@ -18,9 +18,8 @@ export default forwardRef<HTMLAnchorElement, ButtonProps>(function Button(
         display: inline-block;
         font-size: 1.65rem;
         font-weight: bold;
-        font-family: 'IBM Plex Mono', monospace;
+        font-family: ${theme.fonts.mono};
         color: ${theme.colors.gray[200]};
-        cursor: pointer;
         border: 2px solid
           ${variant === 'outlined'
             ? theme.colors.gray[200]

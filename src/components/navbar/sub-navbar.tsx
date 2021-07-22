@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
 
-const SubNavbar = () => {
+function SubNavbar(): JSX.Element {
   return (
     <ListNavItem>
       <NavItem>
@@ -20,8 +20,8 @@ const SubNavbar = () => {
         </Link>
       </NavItem>
       <NavItem>
-        <Link href="/contract">
-          <a>Contract</a>
+        <Link href="/contact">
+          <a>Contact</a>
         </Link>
       </NavItem>
       <NavItem>
@@ -31,7 +31,7 @@ const SubNavbar = () => {
       </NavItem>
     </ListNavItem>
   );
-};
+}
 
 const ListNavItem = styled.ul`
   display: flex;
