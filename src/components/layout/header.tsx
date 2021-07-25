@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { mediaQuery } from '../../styles';
-import { MainNavbar, SubNavbar } from '../navbar';
-import MobileNavbar from '../navbar/mobile-navbar';
+import { MainNavbar, SubNavbar, MobileNavbar } from '../navbar';
 import { useWindowSize } from '../../hooks';
 
 function Header(): JSX.Element {

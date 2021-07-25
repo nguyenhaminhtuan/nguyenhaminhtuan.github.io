@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { useThemeMode } from '../hooks/theme-mode';
 import Icon from './icon';
@@ -11,25 +11,30 @@ const ThemeToggler = () => {
   };
 
   return (
-    <TogglerWrapper type="button" onClick={themeToggler}>
-      <ToggleIcon icon={faSun} size="lg" isActive={theme === 'light'} />
-      <ToggleIcon icon={faMoon} size="lg" isActive={theme === 'dark'} />
-    </TogglerWrapper>
+    <Icon.Button
+      css={styles.root}
+      iconCss={styles.icon(theme === 'light')}
+      icon={faSun}
+      size="lg"
+      onClick={themeToggler}
+    >
+      <Icon css={styles.icon(theme === 'dark')} icon={faMoon} size="lg" />
+    </Icon.Button>
   );
 };
 
-const TogglerWrapper = styled.button`
-  font-size: 25px;
-  width: 50px;
-  height: 50px;
-`;
-
-const ToggleIcon = styled(Icon)<{ isActive: boolean }>`
-  position: absolute;
-  transform: ${(props) =>
-    !props.isActive ? `translate(-50%, 50px)` : `translate(-50%, -50%)`};
-  transition: all 200ms ease-in-out 0s;
-  opacity: ${(props) => (!props.isActive ? 0 : 0.7)};
-`;
+const styles = {
+  root: css`
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+  `,
+  icon: (isActive: boolean) => css`
+    position: absolute;
+    transform: ${!isActive ? `translate(-50%, 50px)` : `translate(-50%, -50%)`};
+    transition: all 200ms ease-in-out 0s;
+    opacity: ${!isActive ? 0 : 0.7};
+  `,
+};
 
 export default ThemeToggler;

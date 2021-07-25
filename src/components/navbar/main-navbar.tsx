@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
+import type { Theme } from '@emotion/react';
 import { mediaQuery } from '../../styles';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
@@ -44,9 +45,11 @@ function MainNavbar({ openNavbar }: MainNavbarProps): JSX.Element {
 }
 
 const styles = {
-  getInTouch: css`
+  getInTouch: (theme: Theme) => css`
     display: none;
     margin-right: 8px;
+    color: ${theme.colors.gray[200]} !important;
+
     ${mediaQuery('sm')} {
       display: inline-block;
     }
@@ -55,6 +58,7 @@ const styles = {
     width: 50px;
     height: 50px;
     font-size: 28px;
+
     ${mediaQuery('sm')} {
       display: none;
     }

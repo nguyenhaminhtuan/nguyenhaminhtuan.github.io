@@ -1,35 +1,32 @@
-import { forwardRef } from 'react';
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
 type ButtonProps = {
   variant: 'default' | 'outlined';
-} & React.ComponentPropsWithRef<'a'>;
+};
 
-export default forwardRef<HTMLAnchorElement, ButtonProps>(function Button(
-  { variant = 'default', ...props },
-  ref
-) {
-  return (
-    <a
-      {...props}
-      ref={ref}
-      css={(theme) => css`
-        padding: 3px 15px;
-        display: inline-block;
-        font-size: 1.65rem;
-        font-weight: bold;
-        font-family: ${theme.fonts.mono};
-        color: ${theme.colors.gray[200]};
-        border: 2px solid
-          ${variant === 'outlined'
-            ? theme.colors.gray[200]
-            : theme.colors.transparent};
+const Button = styled.a<ButtonProps>`
+  margin: 3px;
+  padding: 3px 15px;
+  min-width: 100px;
+  display: inline-block;
+  font-size: 1.65rem;
+  font-weight: bold;
+  font-family: ${(props) => props.theme.fonts.mono};
+  text-align: center;
+  color: ${(props) => props.theme.colors.gray[200]};
+  background-color: ${(props) => props.theme.colors.primary};
+  border: 2px solid
+    ${(props) =>
+      props.variant === 'outlined'
+        ? props.theme.colors.gray[200]
+        : props.theme.colors.transparent};
 
-        &:hover {
-          background-color: ${theme.colors.green[100]};
-          border: 2px solid ${theme.colors.gray[200]};
-        }
-      `}
-    />
-  );
-});
+  &:hover {
+    background-color: ${(props) => props.theme.colors.green[100]};
+    border: 2px solid ${(props) => props.theme.colors.gray[200]};
+  }
+`;
+
+const Base = Button.withComponent('button');
+
+export default Object.assign(Button, { Base });

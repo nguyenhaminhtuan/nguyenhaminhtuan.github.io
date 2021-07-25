@@ -5,6 +5,9 @@ const colors: Color = {
     100: 'rgb(255, 255, 255)',
     200: 'rgb(246, 247, 249)',
   },
+  black: {
+    100: 'rgb(0, 0, 0)',
+  },
   transparent: 'rgba(0, 0, 0, 0)',
   gray: {
     100: 'rgb(60, 60, 59)',

@@ -1,8 +1,35 @@
 import { css } from '@emotion/react';
+import type { Theme } from '@emotion/react';
 import styled from '@emotion/styled';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowRight,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import Icon from '../icon';
+
+type NavItemProps = {
+  href: string;
+  text: string;
+};
+
+function NavItem({ href, text }: NavItemProps) {
+  return (
+    <Link href={href} passHref>
+      <li>
+        <a>{text}</a>
+        <Icon.Button
+          css={(theme) => ({
+            color: theme.colors.green[200],
+            marginRight: 5,
+          })}
+          icon={faChevronRight}
+          size="lg"
+        />
+      </li>
+    </Link>
+  );
+}
 
 type MobileNavbarProps = {
   open: boolean;
@@ -19,52 +46,33 @@ function MobileNavbar({
       <IconWrapper>
         <Icon.Button
           css={styles.icon}
-          icon={faTimes}
+          icon={faArrowRight}
           size="2x"
           onClick={closeNavbar}
         />
       </IconWrapper>
       <Nav>
-        <li>
-          <Link href="/about-me">
-            <a>About me</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/Skills">
-            <a>Skills</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/Projects">
-            <a>Projects</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact">
-            <a>Contact</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/articles">
-            <a>Articles</a>
-          </Link>
-        </li>
+        <NavItem href="/about-me" text="About me" />
+        <NavItem href="/skills" text="Skills" />
+        <NavItem href="/projects" text="Projects" />
+        <NavItem href="/contact" text="Contact" />
+        <NavItem href="/articles" text="Articles" />
       </Nav>
     </MobileNavbarWrapper>
   );
 }
 
 const styles = {
-  icon: css`
+  icon: (theme: Theme) => css`
     width: 50px;
     height: 50px;
-    font-size: 21px;
+    color: ${theme.colors.green[200]};
   `,
 };
 
 const MobileNavbarWrapper = styled.div<{ open: boolean }>`
-  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.green[200]};
+  background-color: ${(props) => props.theme.colors.secondary};
   position: fixed;
   top: 0;
   left: 0;
@@ -76,24 +84,36 @@ const MobileNavbarWrapper = styled.div<{ open: boolean }>`
 `;
 
 const IconWrapper = styled.div`
+  padding: 8px 10px;
   display: flex;
   justify-content: flex-end;
-  padding: 10px 18px;
 `;
 
 const Nav = styled.ul`
-  margin-top: 20px;
+  margin-top: 4rem;
   text-align: center;
 
   & > li {
-    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    font-size: 1.4rem;
     font-weight: bold;
-    font-size: 1.8rem;
     font-family: ${(props) => props.theme.fonts.mono};
-  }
+    border-bottom: 1px solid ${(props) => props.theme.colors.green[200]};
 
-  & > li:not(:last-child) {
-    border-bottom: 1px solid ${(props) => props.theme.colors.secondary};
+    &:hover {
+      cursor: pointer;
+      color: ${(props) => props.theme.colors.white[200]};
+    }
+    &:first-of-type,
+    :last-of-type {
+      color: ${(props) => props.theme.colors.white[200]};
+    }
+    &:first-of-type:hover,
+    :last-of-type:hover {
+      color: ${(props) => props.theme.colors.green[200]};
+    }
   }
 `;
 
