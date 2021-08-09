@@ -1,6 +1,14 @@
+import { css } from '@emotion/react';
+import Head from '../components/head';
+import Terminal from '../components/terminal';
+
 export default function Home(): JSX.Element {
   return (
     <div>
+      <Head />
+      <div css={styles.terminalContainer}>
+        <Terminal />
+      </div>
       <h1>hLHKLQ JSAKLjlkzxc asjd;a sj</h1>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -52,3 +60,10 @@ export default function Home(): JSX.Element {
     </div>
   );
 }
+
+const styles = {
+  terminalContainer: css`
+    max-width: 800px;
+    margin: auto;
+  `,
+};
