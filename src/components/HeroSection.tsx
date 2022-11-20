@@ -4,10 +4,10 @@ export default function HeroSection() {
   return (
     <section id="about-me" className="mx-auto mt-3 max-w-3xl md:mt-5">
       <div className="border-4 border-green-200 bg-gray-100 p-2 font-mono text-sm text-green-200 dark:border-green-300 md:text-base">
-        <p className="md:animate-typing md:overflow-hidden md:whitespace-nowrap">
+        <h1 className="md:animate-typing md:overflow-hidden md:whitespace-nowrap">
           {'>'} Hi 👋 My name is <b>Tuan</b>. I'm a web developer from{' '}
           <b>Vietnam</b> <VietnamFlagIcon className="inline h-4 w-6" />
-        </p>
+        </h1>
       </div>
       <img
         className="mx-auto my-8 block h-32 w-32 md:my-12 md:h-44 md:w-44"

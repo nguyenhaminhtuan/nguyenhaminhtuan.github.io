@@ -11,7 +11,7 @@ export default function MobileNavbar() {
   return (
     <div
       className={clsx(
-        'fixed top-0 left-0 w-full overflow-hidden bg-green-400 text-green-200 transition-[height] duration-200',
+        'fixed top-0 left-0 w-full overflow-hidden bg-green-400 text-green-200 opacity-[0.98] transition-[height] duration-200',
         {
           'h-full': $isNavbarOpen,
           'h-0': !$isNavbarOpen,

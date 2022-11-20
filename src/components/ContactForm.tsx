@@ -21,9 +21,9 @@ export default function ContactForm() {
         id="contact"
         className="mx-auto block max-w-full px-2 md:max-w-[600px]"
       >
-        <div className="mb-10 text-center font-hackernoon text-3xl font-bold text-green-200 dark:text-green-300 sm:text-4xl">
+        <h2 className="mb-10 text-center font-hackernoon text-3xl font-bold text-green-200 dark:text-green-300 sm:text-4xl">
           GET IN TOUCH
-        </div>
+        </h2>
         <FormControl>
           <Label text="Email" />
           <Input
