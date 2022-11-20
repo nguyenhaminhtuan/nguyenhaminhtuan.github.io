@@ -8,10 +8,10 @@ export default function DesktopNavbar() {
         <li
           key={i}
           className={clsx('mx-5 cursor-pointer font-mono text-sm font-bold', {
-            'text-white-100 hover:text-green-200 dark:hover:text-green-300':
-              i !== 0 || i !== links.length - 1,
-            'text-green-200 hover:text-white-100 dark:text-green-300':
+            'text-green-200 hover:text-white-100 dark:text-green-300 dark:hover:text-white-100':
               i === 0 || i === links.length - 1,
+            'text-white-100 hover:text-green-200 dark:text-white-100 dark:hover:text-green-300':
+              i !== 0 && i !== links.length - 1,
           })}
         >
           <a href={l.href}>{l.name}</a>

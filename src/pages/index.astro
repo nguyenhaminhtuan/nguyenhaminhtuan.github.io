@@ -1,7 +1,12 @@
 ---
+import HeroSection from '@components/HeroSection'
+import SkillsSection from '@components/SkillsSection'
 import Layout from '@layouts/Layout.astro'
 
 const {title} = Astro.props
 ---
 
-<Layout title={title}>dasdasdasdasdqkweqhw</Layout>
+<Layout title={title}>
+  <HeroSection />
+  <SkillsSection />
+</Layout>
