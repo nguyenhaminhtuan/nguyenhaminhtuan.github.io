@@ -52,10 +52,14 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 9px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(98, 255, 134);
   border-radius: 12px;
+}
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
 }

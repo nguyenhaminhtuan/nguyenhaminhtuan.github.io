@@ -6,7 +6,7 @@ function SkillItem({children}: {children: React.ReactNode}) {
 
 function ListSkill({children}: {children: React.ReactNode}) {
   return (
-    <ul className="mx-2 mt-1 grid list-disc grid-cols-2 gap-x-4 md:mx-12 md:grid-cols-3">
+    <ul className="ml-6 mt-1 grid list-disc grid-cols-2 gap-x-4 md:mx-12 md:grid-cols-3">
       {children}
     </ul>
   )
