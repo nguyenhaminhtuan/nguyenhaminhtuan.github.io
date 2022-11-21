@@ -17,7 +17,7 @@ export default function SkillsSection() {
     <section id="skills" className="my-16">
       <SectionHeaderText>What can I do</SectionHeaderText>
       <div className="flex justify-center">
-        <div className="text-sm md:text-base">
+        <div className="text-sm md:text-lg">
           <div>
             <b>Front-end:</b>
             <ListSkill>
