@@ -1,0 +1,70 @@
+---
+import SectionHeaderText from './SectionHeaderText'
+import ProjectCard from './ProjectCard.astro'
+import GithubIcon from './icons/Github'
+import GithubRepoLink from './GithubRepoLink'
+---
+
+<section class="mt-16">
+  <SectionHeaderText>Things I’ve Built</SectionHeaderText>
+  <div class="mt-6 md:mt-12">
+    <ProjectCard
+      image="/images/520csgo-project.png"
+      title="520CSGO Store"
+      link="https://520csgo.store/"
+      tags={[
+        'Typescript',
+        'NestJS',
+        'MongoDB',
+        'NextJS',
+        'TailwindCSS',
+        'React Query',
+        'Jotai',
+        'Github Actions',
+        'Docker',
+        'Google Cloud Platform',
+      ]}
+    >
+      <p>
+        A website that you can buy game items (DOTA 2, CSGO) or gift codes from
+        Steam with multiple payment methods (Manual banking, QR Code, Momo). It
+        use Steam account to login via OpenID for authenticate and link customer
+        account to system. All purchased items will automatic send to linked
+        account after payment successful.
+      </p>
+      <p class="mt-2">
+        Back-end API was deployed inside GCE intances Container OS and auto
+        scaling by GCP managed instances group behind a global Cloud Load
+        Balancer. A VPC network cover all services to ensure the security.
+        Front-end was built to static files and stored inside a public GCS
+        bucket. Both Back-end and Front-end were deployed by CI/CD using Github
+        Actions.
+      </p>
+      <div class="mt-4 flex justify-around">
+        <GithubRepoLink
+          href="https://github.com/nguyenhaminhtuan/trader-frontend-client"
+          name="Front-end"
+        />
+        <GithubRepoLink
+          href="https://github.com/nguyenhaminhtuan/trader-backend-api"
+          name="Back-end"
+        />
+      </div>
+    </ProjectCard>
+    <ProjectCard
+      reverse={true}
+      additionClass="mt-20"
+      image="/images/my-portfolio-project.png"
+      title="My Portfolio"
+      link="https://nguyenhaminhtuan.github.io/"
+      tags={[
+        'Typescript',
+        'Astro',
+        'ReactJS Intergrated',
+        'TailwindCSS',
+        'Github Pages',
+        'Github Actions',
+      ]}
+    />
+  </div>
+</section>

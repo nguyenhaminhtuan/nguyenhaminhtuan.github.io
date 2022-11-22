@@ -33,13 +33,14 @@ const works: {jobTitle: string; time: string; description: string[]}[] = [
     description: [
       'Developed, fixed bugs and maintained CRM website of main product by using Typescript, ReactJS, React Query, Zustand, Material UI, Vite.',
       'Built public product detail website with OpenMaps by using LeafletMap, Typescript, NextJS.',
+      'Ensures websites cross-browser compatibility and responsiveness.',
     ],
   },
   {
     jobTitle: 'Web Developer',
     time: 'July 2020 - June 2021',
     description: [
-      'Developed, fixed bugs and maintained main product API primarily using NodeJS, Typescript, NestJS, PostgresSQL.',
+      'Developed, fixed bugs, maintained and documented main product API primarily using NodeJS, Typescript, NestJS, PostgresSQL.',
       'Implement serverless cloud environment with AWS Lambda, API Gateway, S3 by using Serverless Framework.',
       'Build Bitbucket Pipelines CI/CD.',
       'Developed public website follow by Figma design using Typescript, NextJS.',
@@ -60,10 +61,10 @@ export default function WorkSection() {
   const [tab, setTab] = useState(0)
 
   return (
-    <section id="projects" className="mx-auto md:max-w-3xl">
+    <section id="projects" className="mx-auto mt-16 md:max-w-3xl">
       <SectionHeaderText>Where I've Worked</SectionHeaderText>
-      <div className="my-12 flex h-[400px] flex-col border-[3px] border-green-200 p-2 dark:border-green-300 md:h-[300px] md:flex-row md:p-6">
-        <div className="no-scroll flex w-full flex-row overflow-x-auto font-mono text-sm font-bold text-green-200 dark:text-green-300 md:w-auto md:flex-col md:text-lg">
+      <div className="mt-5 flex h-[400px] flex-col border-[3px] border-green-200 p-2 dark:border-green-300 md:mt-8 md:h-[300px] md:flex-row md:p-6">
+        <div className="no-scroll text-black flex w-full flex-row overflow-x-auto font-mono text-sm font-bold dark:text-green-300 md:w-auto md:flex-col md:text-lg">
           {companies.map((c, i) => (
             <CompanyName key={i} active={i === tab} onClick={() => setTab(i)}>
               {c}

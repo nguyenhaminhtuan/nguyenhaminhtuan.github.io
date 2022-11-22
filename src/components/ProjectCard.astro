@@ -1,0 +1,61 @@
+---
+import {Picture} from '@astrojs/image/components'
+import clsx from 'clsx'
+import Tag from './Tag'
+
+type Props = {
+  title: string
+  image: string
+  link: string
+  tags: string[]
+  reverse?: boolean
+  additionClass?: string
+}
+
+const {
+  image,
+  title,
+  link,
+  tags,
+  additionClass = '',
+  reverse = false,
+} = Astro.props
+const wrapperClass = clsx(
+  additionClass,
+  'flex gap-x-4 flex-col md:items-center',
+  {
+    'md:flex-row': !reverse,
+    'md:flex-row-reverse': reverse,
+  }
+)
+---
+
+<div class={wrapperClass}>
+  <Picture
+    class="rounded"
+    src={image}
+    alt={title}
+    aspectRatio="16:9"
+    widths={[900]}
+    sizes="(max-width: 1000px) 1000px, 500px"
+    fit="fill"
+  />
+  <div class="flex-1">
+    <div class="text-center">
+      <a
+        class="text-center text-lg md:text-xl uppercase underline font-bold font-mono"
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {title}
+      </a>
+    </div>
+    <div class="flex flex-wrap mt-2 gap-1">
+      {tags.map((t) => <Tag text={t} />)}
+    </div>
+    <div class="mt-3 text-sm md:text-base">
+      <slot />
+    </div>
+  </div>
+</div>

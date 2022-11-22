@@ -73,7 +73,7 @@ export default function ContactForm() {
   }, [state])
 
   return (
-    <div className="border-t-[7px] border-green-200 bg-gray-100 py-12 dark:border-green-300">
+    <div className="mt-10 border-t-[7px] border-green-200 bg-gray-100 py-12 dark:border-green-300">
       <form
         id="contact"
         className="mx-auto block max-w-full px-2 md:max-w-[600px]"

@@ -3,6 +3,7 @@ import Layout from '@layouts/Layout.astro'
 import HeroSection from '@components/HeroSection.astro'
 import SkillsSection from '@components/SkillsSection'
 import WorkSection from '@components/WorkSection'
+import ProjectsSection from '@components/ProjectsSection.astro'
 ---
 
 <Layout
@@ -12,4 +13,5 @@ import WorkSection from '@components/WorkSection'
   <HeroSection />
   <SkillsSection />
   <WorkSection client:visible />
+  <ProjectsSection />
 </Layout>
