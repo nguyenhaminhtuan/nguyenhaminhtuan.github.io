@@ -6,7 +6,7 @@ export default function ContactItem({icon: Icon, ...props}: ContactItemProps) {
   return (
     <a
       {...props}
-      className="mx-3 cursor-pointer"
+      className="mx-4 cursor-pointer"
       target="_blank"
       rel="noreferrer"
     >

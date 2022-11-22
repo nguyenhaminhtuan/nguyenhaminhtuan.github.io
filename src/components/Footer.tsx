@@ -25,10 +25,10 @@ export default function Footer() {
         />
         <ContactItem aria-label="Linkedin" icon={LinkedinIcon} href="#" />
       </div>
-      <b className="font-mono">
+      <b className="font-mono text-base md:text-lg">
         Nguyen Ha Minh Tuan | {new Date().getFullYear()}
       </b>
-      <p className="mt-4 font-sans">
+      <p className="mt-4 font-sans text-base md:text-lg">
         Hosted by{' '}
         <b>
           <u>Github Pages</u>
