@@ -1,0 +1,31 @@
+---
+import Button from './Button'
+import DesktopNavbar from './DesktopNavbar'
+import Logo from './Logo'
+import MenuNavbarButton from './MenuNavbarButton'
+import MobileNavbar from './MobileNavbar'
+import ThemeToogler from './ThemeToogler'
+---
+
+<header class="fixed top-0 left-0 w-full">
+  <div class="bg-green-200 px-3 dark:bg-green-300">
+    <div class="container flex h-header items-center justify-between">
+      <MenuNavbarButton client:load />
+      <Logo />
+      <div class="flex items-center">
+        <div class="hidden md:block">
+          <Button href="#contact" className="md:mr-9" variant="outlined">
+            Get in touch
+          </Button>
+        </div>
+        <ThemeToogler client:load />
+      </div>
+    </div>
+  </div>
+  <div class="hidden md:block">
+    <DesktopNavbar />
+  </div>
+  <div class="block md:hidden">
+    <MobileNavbar client:load />
+  </div>
+</header>

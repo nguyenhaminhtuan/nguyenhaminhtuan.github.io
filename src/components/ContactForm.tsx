@@ -119,7 +119,11 @@ export default function ContactForm() {
         </FormControl>
         <div className="mt-2 text-center font-mono text-red-500">{error}</div>
         <div className="mt-5 text-center">
-          <ButtonBase disabled={state !== 'idle'} onClick={handleSubmit}>
+          <ButtonBase
+            aria-label="Send contact"
+            disabled={state !== 'idle'}
+            onClick={handleSubmit}
+          >
             🚀 Send me
           </ButtonBase>
         </div>

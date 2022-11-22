@@ -9,18 +9,21 @@ export default function Footer() {
     <footer className="border-t-[7px] border-green-200 bg-green-400 py-8 text-center text-green-200 dark:border-green-300 dark:text-green-300">
       <div className="mb-6 flex justify-center">
         <ContactItem
+          aria-label="Send mail"
           icon={EnvelopIcon}
           href="mailto:nguyenhaminhtuan.dev@gmail.com"
         />
         <ContactItem
+          aria-label="Github"
           icon={GithubIcon}
           href="https://github.com/nguyenhaminhtuan"
         />
         <ContactItem
+          aria-label="Facebook"
           icon={FacebookIcon}
           href="https://www.facebook.com/minhtuan.nguyen.1997"
         />
-        <ContactItem icon={LinkedinIcon} href="#" />
+        <ContactItem aria-label="Linkedin" icon={LinkedinIcon} href="#" />
       </div>
       <b className="font-mono">
         Nguyen Ha Minh Tuan | {new Date().getFullYear()}

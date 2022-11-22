@@ -1,12 +1,15 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import HeroSection from '@components/HeroSection'
+import HeroSection from '@components/HeroSection.astro'
 import SkillsSection from '@components/SkillsSection'
 import WorkSection from '@components/WorkSection'
 ---
 
-<Layout title="Nguyen Ha Minh Tuan">
+<Layout
+  title="Nguyen Ha Minh Tuan"
+  description="Hi 👋 My name is Tuan. I'm a web developer from Vietnam"
+>
   <HeroSection />
   <SkillsSection />
-  <WorkSection client:only />
+  <WorkSection client:visible />
 </Layout>

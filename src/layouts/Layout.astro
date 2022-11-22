@@ -1,14 +1,15 @@
 ---
 import '@styles/global.css'
-import Header from '@components/Header'
+import Header from '@components/Header.astro'
 import Footer from '@components/Footer'
 import ContactForm from '@components/ContactForm'
 
 export type Props = {
   title: string
+  description: string
 }
 
-const {title} = Astro.props
+const {title, description} = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -18,16 +19,17 @@ const {title} = Astro.props
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
     <title>{title}</title>
   </head>
   <body
     class="dark:bg-gray-200 text-lg font-sans text-black-100 dark:text-white-100"
   >
-    <Header client:only />
+    <Header />
     <main class="container mt-header md:mt-top py-4 px-2">
       <slot />
     </main>
-    <ContactForm client:only />
+    <ContactForm client:visible />
     <Footer />
   </body>
 </html>

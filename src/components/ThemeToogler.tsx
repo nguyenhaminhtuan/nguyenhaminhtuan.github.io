@@ -20,7 +20,7 @@ export default function ThemeToogler() {
   }, [theme])
 
   return (
-    <button type="button" className="relative w-5">
+    <button type="button" aria-label="Theme switcher" className="relative w-5">
       <SunIcon
         className={clsx(
           'absolute h-8 w-8 fill-green-400 transition-all duration-200 ease-in-out	md:h-9 md:w-9',

@@ -1,0 +1,30 @@
+---
+import {Image} from '@astrojs/image/components'
+import VietnamFlagIcon from './icons/VietnamFlag'
+---
+
+<section id="about-me" class="mx-auto mt-3 max-w-3xl md:mt-5">
+  <div
+    class="border-4 border-green-200 bg-gray-100 p-2 font-mono text-sm text-green-200 dark:border-green-300 md:text-base"
+  >
+    <h1 class="md:animate-typing md:overflow-hidden md:whitespace-nowrap">
+      {'>'} Hi 👋 My name is <b>Tuan</b>. I'm a web developer from{' '}
+      <b>Vietnam</b>
+      <VietnamFlagIcon className="inline h-4 w-6" />
+    </h1>
+  </div>
+  <Image
+    class="mx-auto my-8 block"
+    src="/images/avatar.jpeg"
+    alt="Handsome boy"
+    format="webp"
+    width={160}
+    height={160}
+  />
+  <div class="text-center text-base font-medium md:text-lg">
+    I love building websites, applications with better perfomance as well as
+    enhanced experience. I have 2+ years of experiences in Front-end development
+    with ReactJS and Back-end with NodeJS but I'm not stuck in with Javascript
+    stack and able to write code in C# or Java.
+  </div>
+</section>

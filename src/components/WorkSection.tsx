@@ -31,7 +31,7 @@ const works: {jobTitle: string; time: string; description: string[]}[] = [
     jobTitle: 'Front-end Developer',
     time: 'March 2022 - present',
     description: [
-      'Developed, fixed bugs and maintained CRM website of main product by using Typescript, ReactJS, React Query, Jotai, Material UI, Vite.',
+      'Developed, fixed bugs and maintained CRM website of main product by using Typescript, ReactJS, React Query, Zustand, Material UI, Vite.',
       'Built public product detail website with OpenMaps by using LeafletMap, Typescript, NextJS.',
     ],
   },

@@ -1,13 +1,12 @@
 type ContactItemProps = {
   icon: React.ComponentType<JSX.IntrinsicElements['svg']>
-  href: string
-}
+} & JSX.IntrinsicElements['a']
 
-export default function ContactItem({icon: Icon, href}: ContactItemProps) {
+export default function ContactItem({icon: Icon, ...props}: ContactItemProps) {
   return (
     <a
+      {...props}
       className="mx-3 cursor-pointer"
-      href={href}
       target="_blank"
       rel="noreferrer"
     >
