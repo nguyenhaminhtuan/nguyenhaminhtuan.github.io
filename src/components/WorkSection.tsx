@@ -41,7 +41,7 @@ const works: {jobTitle: string; time: string; description: string[]}[] = [
     time: 'July 2020 - June 2021',
     description: [
       'Developed, fixed bugs, maintained and documented main product API primarily using NodeJS, Typescript, NestJS, PostgresSQL.',
-      'Implement serverless cloud environment with AWS Lambda, API Gateway, S3 by using Serverless Framework.',
+      'Implement serverless cloud environment with AWS Lambda, API Gateway, S3, Cognito by using Serverless Framework.',
       'Build Bitbucket Pipelines CI/CD.',
       'Developed public website follow by Figma design using Typescript, NextJS.',
     ],
