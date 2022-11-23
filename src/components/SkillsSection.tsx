@@ -1,14 +1,48 @@
 import SectionHeaderText from './SectionHeaderText'
 
-function SkillItem({children}: {children: React.ReactNode}) {
-  return <li>{children}</li>
-}
+const frontend = [
+  'HTML5 / CSS3 / Javascript',
+  'Typescript',
+  'ReactJS',
+  'NextJS',
+  'Bootstrap',
+  'TailwindCSS',
+  'Ant Design / Material UI',
+  'styled-components / emotion',
+  'Redux / Redux Toolkit',
+  'Redux Thunk / Redux Saga',
+  'React Query',
+  'Webpack',
+]
+const backend = [
+  'C# / Java',
+  'Typescript',
+  'SQL',
+  'NodeJS',
+  '.NET Core',
+  'ExpressJS /NestJS',
+  'ASP.NET Core',
+  'TypeORM / Prisma',
+  'Entity Framework Core',
+  'REST API / GraphQL',
+  'PostgreSQL',
+  'MongoDB',
+]
+const devops = [
+  'Docker',
+  'GCP (GCE, GLB, GCS, GCR)',
+  'AWS (Lambda, API Gateway, S3, Cognito)',
+  'Github Actions / Bitbucket Pipelines',
+  'Serverless Framework',
+]
+const others = ['Git', 'Familiar with Figma', 'Familiar with Agile/Scrum']
 
-function ListSkill({children}: {children: React.ReactNode}) {
+function HeaderText(props: {children: React.ReactNode}) {
   return (
-    <ul className="ml-6 mt-1 grid list-disc grid-cols-2 gap-x-4 md:mx-12 md:grid-cols-3">
-      {children}
-    </ul>
+    <div
+      className="mb-1 font-hackernoonv2 text-lg font-bold text-green-200 md:text-2xl"
+      {...props}
+    />
   )
 }
 
@@ -16,49 +50,32 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="mt-12 md:mt-16">
       <SectionHeaderText>What can I do</SectionHeaderText>
-      <div className="mt-6 flex justify-center bg-gray-100">
-        <div className="text-sm md:text-lg">
+      <div className="mt-6 bg-gray-100 p-4 text-center font-mono text-sm text-white-200  md:text-lg">
+        <div className="flex flex-col justify-around gap-x-2 gap-y-4 md:flex-row">
           <div>
-            <b>Front-end:</b>
-            <ListSkill>
-              <SkillItem>Javascript / Typescript</SkillItem>
-              <SkillItem>ReactJS</SkillItem>
-              <SkillItem>NextJS</SkillItem>
-              <SkillItem>Typescript</SkillItem>
-              <SkillItem>Redux / Redux Toolkit</SkillItem>
-              <SkillItem>React Query</SkillItem>
-              <SkillItem>HTML5 / CSS3</SkillItem>
-              <SkillItem>Redux Thunk / Redux Saga</SkillItem>
-              <SkillItem>TailwindCSS / Bootstrap</SkillItem>
-              <SkillItem>CSS-in-JS</SkillItem>
-              <SkillItem>Webpack</SkillItem>
-            </ListSkill>
-          </div>
-          <div className="my-4">
-            <b>Back-end:</b>
-            <ListSkill>
-              <SkillItem>Javascript / Typescript</SkillItem>
-              <SkillItem>ExpressJS</SkillItem>
-              <SkillItem>ASP.NET Core</SkillItem>
-              <SkillItem>NodeJS</SkillItem>
-              <SkillItem>NestJS</SkillItem>
-              <SkillItem>Entity Framework Core</SkillItem>
-              <SkillItem>SQL</SkillItem>
-              <SkillItem>TypeORM / Prisma</SkillItem>
-              <SkillItem>REST API / GraphQL</SkillItem>
-            </ListSkill>
+            <HeaderText>Back-end</HeaderText>
+            <ul>
+              {backend.map((s) => (
+                <li>{s}</li>
+              ))}
+            </ul>
           </div>
           <div>
-            <b>DevOps:</b>
-            <ListSkill>
-              <SkillItem>Docker</SkillItem>
-              <SkillItem>Google Cloud (GCE, GLB, GCS)</SkillItem>
-              <SkillItem>AWS Lambda / Serverless Framework</SkillItem>
-              <SkillItem>Git</SkillItem>
-              <SkillItem>Github Actions</SkillItem>
-              <SkillItem>Bitbucket Pipelines</SkillItem>
-            </ListSkill>
+            <HeaderText>Front-end</HeaderText>
+            <ul>
+              {frontend.map((s) => (
+                <li>{s}</li>
+              ))}
+            </ul>
           </div>
+        </div>
+        <div className="mt-4">
+          <HeaderText>DevOps</HeaderText>
+          <ul>
+            {devops.map((s) => (
+              <li>{s}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

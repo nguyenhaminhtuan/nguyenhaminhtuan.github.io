@@ -4,6 +4,11 @@
   font-display: swap;
 }
 @font-face {
+  font-family: 'HackernoonV2';
+  src: url('/fonts/HackerNoonV2-Regular.ttf');
+  font-display: swap;
+}
+@font-face {
   font-family: 'IBM Plex Mono';
   src: url('/fonts/IBMPlexMono-Regular.ttf');
   font-display: swap;

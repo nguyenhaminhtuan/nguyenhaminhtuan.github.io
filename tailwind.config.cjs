@@ -8,6 +8,7 @@ module.exports = {
         sans: "'IBM Plex Sans', sans-serif",
         mono: "'IBM Plex Mono', monospace",
         hackernoon: 'Hackernoon',
+        hackernoonv2: 'HackernoonV2',
       },
       container: {
         center: true,
