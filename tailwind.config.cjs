@@ -21,8 +21,8 @@ module.exports = {
       },
       colors: {
         white: {
-          100: 'rgb(255, 255, 255)',
-          200: 'rgb(246, 247, 249)',
+          200: 'rgb(255, 255, 255)',
+          100: 'rgb(246, 247, 249)',
         },
         black: {
           100: 'rgb(0, 0, 0)',
@@ -45,6 +45,11 @@ module.exports = {
       spacing: {
         header: '56px',
         top: '98px',
+      },
+      backgroundImage: {
+        grad: 'linear-gradient(transparent 0%, transparent calc(50% - 9px), rgba(0, 255, 0, 0.35) calc(50% - 9px), rgba(0, 255, 0, 0.35) 100%)',
+        'grad-hover':
+          'linear-gradient(transparent 0%, transparent calc(50% - 9px), rgb(0, 255, 0) calc(50% - 9px), rgb(0, 255, 0) 100%)',
       },
     },
     keyframes: {

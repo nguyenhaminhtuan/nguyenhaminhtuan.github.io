@@ -13,7 +13,7 @@ function CompanyName({children, active = false, onClick}: CompanyNameProps) {
   return (
     <div
       className={clsx(
-        'cursor-pointer border-y-2  border-white-100 py-1 px-3 hover:bg-green-100 hover:text-green-400 dark:border-gray-200',
+        'cursor-pointer py-1 px-3 hover:bg-green-100 hover:text-green-400',
         {
           'bg-green-100 text-green-400': active,
         }
@@ -64,7 +64,7 @@ export default function WorkSection() {
     <section id="projects" className="mx-auto mt-16 md:max-w-3xl">
       <SectionHeaderText>Where I've Worked</SectionHeaderText>
       <div className="mt-5 flex h-[400px] flex-col border-[3px] border-green-200 p-2 dark:border-green-300 md:mt-8 md:h-[300px] md:flex-row md:p-6">
-        <div className="no-scroll text-black flex w-full flex-row overflow-x-auto font-mono text-sm font-bold dark:text-green-300 md:w-auto md:flex-col md:text-lg">
+        <div className="no-scroll flex w-full flex-row gap-1 overflow-x-auto font-mono text-base font-bold dark:text-green-300 md:w-auto md:flex-col md:text-lg">
           {companies.map((c, i) => (
             <CompanyName key={i} active={i === tab} onClick={() => setTab(i)}>
               {c}

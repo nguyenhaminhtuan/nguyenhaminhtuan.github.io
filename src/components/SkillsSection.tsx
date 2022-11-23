@@ -16,7 +16,7 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="mt-12 md:mt-16">
       <SectionHeaderText>What can I do</SectionHeaderText>
-      <div className="mt-6 flex justify-center">
+      <div className="mt-6 flex justify-center bg-gray-100">
         <div className="text-sm md:text-lg">
           <div>
             <b>Front-end:</b>
