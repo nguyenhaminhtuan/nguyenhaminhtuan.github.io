@@ -65,6 +65,23 @@ import GithubRepoLink from './GithubRepoLink'
         'Github Pages',
         'Github Actions',
       ]}
-    />
+    >
+      <p>
+        The current website you are viewing. It was first built with NextJS and
+        Emotion but then the Astro stable version was officially released and I
+        decied to make a new version of portfolio using Astro and TailwindCSS.
+      </p>
+      <p class="mt-2">
+        The contact form was integrated with my API using Telegram Bot send
+        information as a message Telegram to my Telegram account. API was
+        deployed by using Cloudflare Worker.
+      </p>
+      <div class="mt-4 flex justify-center">
+        <GithubRepoLink
+          href="https://github.com/nguyenhaminhtuan/nguyenhaminhtuan.github.io"
+          name="Repository"
+        />
+      </div>
+    </ProjectCard>
   </div>
 </section>

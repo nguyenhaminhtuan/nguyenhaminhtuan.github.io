@@ -8,7 +8,7 @@ const frontend = [
   'Bootstrap',
   'TailwindCSS',
   'Ant Design / Material UI',
-  'styled-components / emotion',
+  'Styled Components / Emotion',
   'Redux / Redux Toolkit',
   'Redux Thunk / Redux Saga',
   'React Query',
